@@ -13,7 +13,7 @@ export class ProductService {
     const product = this.products.find((product) => product.id === id);
 
     if (!product) {
-      throw new NotFoundException(`Todo with id ${id} not found`);
+      throw new NotFoundException(`Product with id ${id} not found`);
     }
 
     return product;
@@ -30,7 +30,7 @@ export class ProductService {
     const product = this.findById(id);
 
     if (!product) {
-      throw new NotFoundException(`Todo with id ${id} not found`);
+      throw new NotFoundException(`Product with id ${id} not found`);
     }
 
     this.products = this.products.filter((product) => product.id !== id);

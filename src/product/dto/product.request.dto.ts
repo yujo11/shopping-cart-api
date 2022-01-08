@@ -2,7 +2,7 @@ import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
 
 export class ProductRequestDto {
   @IsNumber()
-  price: string;
+  price: number;
 
   @IsString()
   @IsNotEmpty()
