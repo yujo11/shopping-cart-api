@@ -9,7 +9,7 @@
 ## 🌏 baseUrl
 
 ```
-localhost:3000/api/cart
+https://clean-code-shopping-cart.herokuapp.com/
 ```
 
 ## 🎁 상품
