@@ -24,16 +24,16 @@ https://clean-code-shopping-cart.herokuapp.com/
 {
   "response": [
     {
-      "product_id": 1,
+      "productId": 1,
       "price": 10000,
       "name": "치킨",
-      "image_url": "http://example.com/chicken.jpg"
+      "imageUrl": "http://example.com/chicken.jpg"
     },
     {
-      "product_id": 2,
+      "productId": 2,
       "price": 20000,
       "name": "피자",
-      "image_url": "http://example.com/pizza.jpg"
+      "imageUrl": "http://example.com/pizza.jpg"
     }
   ]
 }
@@ -52,33 +52,33 @@ https://clean-code-shopping-cart.herokuapp.com/
   "requestBody": {
     "price": 10000,
     "name": "치킨",
-    "image_url": "http://example.com/chicken.jpg"
+    "imageUrl": "http://example.com/chicken.jpg"
   }
 }
 ```
 
 ### 상품 단일 조회
 
-| method | uri                        |
-| ------ | -------------------------- |
-| GET    | /api/products/{product_id} |
+| method | uri                       |
+| ------ | ------------------------- |
+| GET    | /api/products/{productId} |
 
 ```json
 {
   "response": {
-    "product_id": 1,
+    "productId": 1,
     "price": 10000,
     "name": "치킨",
-    "image_url": "http://example.com/chicken.jpg"
+    "imageUrl": "http://example.com/chicken.jpg"
   }
 }
 ```
 
 ### 상품 단일 삭제
 
-| method | uri                        |
-| ------ | -------------------------- |
-| DELETE | /api/products/{product_id} |
+| method | uri                       |
+| ------ | ------------------------- |
+| DELETE | /api/products/{productId} |
 
 ```json
 {
@@ -98,16 +98,16 @@ https://clean-code-shopping-cart.herokuapp.com/
 {
   "response": [
     {
-      "product_id": 1,
+      "productId": 1,
       "price": 10000,
       "name": "치킨",
-      "image_url": "http://example.com/chicken.jpg"
+      "imageUrl": "http://example.com/chicken.jpg"
     },
     {
-      "product_id": 2,
+      "productId": 2,
       "price": 20000,
       "name": "피자",
-      "image_url": "http://example.com/pizza.jpg"
+      "imageUrl": "http://example.com/pizza.jpg"
     }
   ]
 }
@@ -122,7 +122,7 @@ https://clean-code-shopping-cart.herokuapp.com/
 ```json
 {
   "requestBody": {
-    "product_id": 1
+    "productId": 1
   }
 }
 ```
@@ -176,17 +176,17 @@ https://clean-code-shopping-cart.herokuapp.com/
       "order_id": 1,
       "order_details": [
         {
-          "product_id": 1,
+          "productId": 1,
           "price": 10000,
           "name": "치킨",
-          "image_url": "http://example.com/chicken.jpg",
+          "imageUrl": "http://example.com/chicken.jpg",
           "quantity": 5
         },
         {
-          "product_id": 2,
+          "productId": 2,
           "price": 20000,
           "name": "피자",
-          "image_url": "http://example.com/pizza.jpg",
+          "imageUrl": "http://example.com/pizza.jpg",
           "quantity": 3
         }
       ]
@@ -195,17 +195,17 @@ https://clean-code-shopping-cart.herokuapp.com/
       "order_id": 2,
       "order_details": [
         {
-          "product_id": 1,
+          "productId": 1,
           "price": 10000,
           "name": "치킨",
-          "image_url": "http://example.com/chicken.jpg",
+          "imageUrl": "http://example.com/chicken.jpg",
           "quantity": 5
         },
         {
-          "product_id": 2,
+          "productId": 2,
           "price": 20000,
           "name": "피자",
-          "image_url": "http://example.com/pizza.jpg",
+          "imageUrl": "http://example.com/pizza.jpg",
           "quantity": 3
         }
       ]
@@ -225,10 +225,10 @@ https://clean-code-shopping-cart.herokuapp.com/
     "order_id": 1,
     "order_details": [
       {
-        "product_id": 1,
+        "productId": 1,
         "price": 10000,
         "name": "치킨",
-        "image_url": "http://example.com/chicken.jpg",
+        "imageUrl": "http://example.com/chicken.jpg",
         "quantity": 5
       }
     ]
