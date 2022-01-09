@@ -10,5 +10,5 @@ export class ProductRequestDto {
 
   @IsString()
   @IsNotEmpty()
-  image_url: string;
+  imageUrl: string;
 }

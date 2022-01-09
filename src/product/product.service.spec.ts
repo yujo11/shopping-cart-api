@@ -29,7 +29,7 @@ describe('ProductService', () => {
       service.create({
         price: 10000,
         name: 'chicken',
-        image_url: 'test.com/chicken',
+        imageUrl: 'test.com/chicken',
       });
 
       const result = await service.findById(1);
@@ -43,7 +43,7 @@ describe('ProductService', () => {
       service.create({
         price: 10000,
         name: 'chicken',
-        image_url: 'test.com/chicken',
+        imageUrl: 'test.com/chicken',
       });
 
       await service.deleteById(1);
@@ -67,7 +67,7 @@ describe('ProductService', () => {
       await service.create({
         price: 10000,
         name: 'chicken',
-        image_url: 'test.com/chicken',
+        imageUrl: 'test.com/chicken',
       });
 
       const result = await service.findById(1);
