@@ -16,9 +16,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 상품 목록 조회
 
-| method | uri           |
-| ------ | ------------- |
-| GET    | /api/products |
+| method | uri     |
+| ------ | ------- |
+| GET    | product |
 
 ```json
 {
@@ -41,11 +41,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 상품 추가
 
-| method | uri           |
-| ------ | ------------- |
-| POST   | /api/products |
-
-`POST /api/products`
+| method | uri     |
+| ------ | ------- |
+| POST   | product |
 
 ```json
 {
@@ -59,9 +57,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 상품 단일 조회
 
-| method | uri                       |
-| ------ | ------------------------- |
-| GET    | /api/products/{productId} |
+| method | uri                 |
+| ------ | ------------------- |
+| GET    | product/{productId} |
 
 ```json
 {
@@ -76,9 +74,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 상품 단일 삭제
 
-| method | uri                       |
-| ------ | ------------------------- |
-| DELETE | /api/products/{productId} |
+| method | uri                 |
+| ------ | ------------------- |
+| DELETE | product/{productId} |
 
 ```json
 {
@@ -90,9 +88,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 장바구니 아이템 목록 조회
 
-| method | uri                                  |
-| ------ | ------------------------------------ |
-| GET    | /api/customers/{customer_name}/carts |
+| method | uri   |
+| ------ | ----- |
+| GET    | /cart |
 
 ```json
 {
@@ -115,9 +113,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 장바구니 아이템 추가
 
-| method | uri                                  |
-| ------ | ------------------------------------ |
-| POST   | /api/customers/{customer_name}/carts |
+| method | uri   |
+| ------ | ----- |
+| POST   | /cart |
 
 ```json
 {
@@ -129,9 +127,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 장바구니 아이템 단일 삭제
 
-| method | uri                                            |
-| ------ | ---------------------------------------------- |
-| DELETE | /api/customers/{customer_name}/carts/{cart_id} |
+| method | uri             |
+| ------ | --------------- |
+| DELETE | /cart/{cart_id} |
 
 ```json
 {
@@ -143,9 +141,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 주문 추가(주문하기)
 
-| method | uri                                   |
-| ------ | ------------------------------------- |
-| POST   | /api/customers/{customer_name}/orders |
+| method | uri    |
+| ------ | ------ |
+| POST   | /order |
 
 ```json
 {
@@ -164,9 +162,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 주문 목록(내역) 조회
 
-| method | uri                                   |
-| ------ | ------------------------------------- |
-| GET    | /api/customers/{customer_name}/orders |
+| method | uri    |
+| ------ | ------ |
+| GET    | /order |
 
 ```json
 
@@ -215,9 +213,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 주문 단일 조회
 
-| method | uri                                              |
-| ------ | ------------------------------------------------ |
-| GET    | /api/customers/{customer_name}/orders/{order_id} |
+| method | uri               |
+| ------ | ----------------- |
+| GET    | /order/{order_id} |
 
 ```json
 {
