@@ -16,9 +16,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 상품 목록 조회
 
-| method | uri     |
-| ------ | ------- |
-| GET    | product |
+| method | uri       |
+| ------ | --------- |
+| GET    | /products |
 
 ```json
 {
@@ -41,9 +41,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 상품 추가
 
-| method | uri     |
-| ------ | ------- |
-| POST   | product |
+| method | uri       |
+| ------ | --------- |
+| POST   | /products |
 
 ```json
 {
@@ -57,9 +57,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 상품 단일 조회
 
-| method | uri                 |
-| ------ | ------------------- |
-| GET    | product/{productId} |
+| method | uri                   |
+| ------ | --------------------- |
+| GET    | /products/{productId} |
 
 ```json
 {
@@ -74,9 +74,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 상품 단일 삭제
 
-| method | uri                 |
-| ------ | ------------------- |
-| DELETE | product/{productId} |
+| method | uri                   |
+| ------ | --------------------- |
+| DELETE | /products/{productId} |
 
 ```json
 {
