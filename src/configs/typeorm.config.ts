@@ -6,7 +6,8 @@ export const TypeORMConfig: TypeOrmModuleOptions = {
   port: 5432,
   username: 'postgres',
   password: 'postgres',
-  database: 'shopping-cart',
+  database: 'cart',
   entities: [__dirname + '/../**/*.entity.{js,ts}'],
   synchronize: true,
+  dropSchema: true,
 };
