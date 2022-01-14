@@ -12,6 +12,12 @@
 https://clean-code-shopping-cart.herokuapp.com/
 ```
 
+## 🔗 API 바로가기
+
+- [🎁 상품(products)](https://github.com/yujo11/shopping-cart-nest-api#-%EC%83%81%ED%92%88)
+- [🛒 장바구니(carts)](https://github.com/yujo11/shopping-cart-nest-api#-%EC%9E%A5%EB%B0%94%EA%B5%AC%EB%8B%88)
+- [🗒 주문(orders)](https://github.com/yujo11/shopping-cart-nest-api#-%EC%A3%BC%EB%AC%B8)
+
 ## 🎁 상품
 
 ### 상품 목록 조회
