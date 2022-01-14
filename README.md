@@ -88,24 +88,24 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 장바구니 아이템 목록 조회
 
-| method | uri   |
-| ------ | ----- |
-| GET    | /cart |
+| method | uri                       |
+| ------ | ------------------------- |
+| GET    | /customers/{userId}/carts |
 
 ```json
 {
   "response": [
     {
-      "productId": 1,
+      "cartId": 1,
       "price": 10000,
       "name": "치킨",
-      "imageUrl": "http://example.com/chicken.jpg"
+      "image_url": "http://example.com/chicken.jpg"
     },
     {
-      "productId": 2,
+      "cartId": 2,
       "price": 20000,
       "name": "피자",
-      "imageUrl": "http://example.com/pizza.jpg"
+      "image_url": "http://example.com/pizza.jpg"
     }
   ]
 }
@@ -113,9 +113,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 장바구니 아이템 추가
 
-| method | uri   |
-| ------ | ----- |
-| POST   | /cart |
+| method | uri                        |
+| ------ | -------------------------- |
+| POST   | /customers/{userId}/carts/ |
 
 ```json
 {
@@ -127,9 +127,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 장바구니 아이템 단일 삭제
 
-| method | uri             |
-| ------ | --------------- |
-| DELETE | /cart/{cart_id} |
+| method | uri                                |
+| ------ | ---------------------------------- |
+| DELETE | /customers/{userId}/carts/{cartId} |
 
 ```json
 {
@@ -141,19 +141,19 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 주문 추가(주문하기)
 
-| method | uri    |
-| ------ | ------ |
-| POST   | /order |
+| method | uri                        |
+| ------ | -------------------------- |
+| POST   | /customers/{userId}/orders |
 
 ```json
 {
   "requestBody": [
     {
-      "cart_id": 1,
+      "cartId": 1,
       "quantity": 5
     },
     {
-      "cart_id": 2,
+      "cartId": 2,
       "quantity": 3
     }
   ]
@@ -162,17 +162,17 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 주문 목록(내역) 조회
 
-| method | uri    |
-| ------ | ------ |
-| GET    | /order |
+| method | uri                        |
+| ------ | -------------------------- |
+| GET    | /customers/{userId}/orders |
 
 ```json
 
 {
   "response": [
     {
-      "order_id": 1,
-      "order_details": [
+      "orderId": 1,
+      "orderDetails": [
         {
           "productId": 1,
           "price": 10000,
@@ -190,8 +190,8 @@ https://clean-code-shopping-cart.herokuapp.com/
       ]
     },
     {
-      "order_id": 2,
-      "order_details": [
+      "orderId": 2,
+      "orderDetails": [
         {
           "productId": 1,
           "price": 10000,
@@ -213,21 +213,28 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 주문 단일 조회
 
-| method | uri               |
-| ------ | ----------------- |
-| GET    | /order/{order_id} |
+| method | uri                                  |
+| ------ | ------------------------------------ |
+| GET    | /customers/{userId}/orders/{orderId} |
 
 ```json
 {
   "response": {
-    "order_id": 1,
-    "order_details": [
+    "orderId": 1,
+    "orderDetails": [
       {
         "productId": 1,
         "price": 10000,
         "name": "치킨",
         "imageUrl": "http://example.com/chicken.jpg",
         "quantity": 5
+      },
+      {
+        "productId": 2,
+        "price": 20000,
+        "name": "피자",
+        "imageUrl": "http://example.com/pizza.jpg",
+        "quantity": 3
       }
     ]
   }
