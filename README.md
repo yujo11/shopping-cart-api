@@ -105,13 +105,13 @@ https://clean-code-shopping-cart.herokuapp.com/
       "cartId": 1,
       "price": 10000,
       "name": "치킨",
-      "image_url": "http://example.com/chicken.jpg"
+      "imageUrl": "http://example.com/chicken.jpg"
     },
     {
       "cartId": 2,
       "price": 20000,
       "name": "피자",
-      "image_url": "http://example.com/pizza.jpg"
+      "imageUrl": "http://example.com/pizza.jpg"
     }
   ]
 }
