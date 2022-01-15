@@ -22,7 +22,7 @@ export class ProductsController {
     return this.productsService.getAllProducts();
   }
 
-  @Delete()
+  @Delete('/:id')
   deleteProduct(@Param('id') id: number): Promise<void> {
     return this.productsService.deleteProduct(id);
   }
