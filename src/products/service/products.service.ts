@@ -11,8 +11,11 @@ export class ProductsService {
     private readonly productRepository: ProductRepository,
   ) {}
 
-  createProduct(createProductData: CreateProductDto): Promise<Product> {
-    return this.productRepository.createProduct(createProductData);
+  async createProduct(createProductData: CreateProductDto): Promise<Product> {
+    const product = new Product({ ...createProductData });
+    await this.productRepository.save(product);
+
+    return product;
   }
 
   getAllProducts(): Promise<Product[]> {
