@@ -2,7 +2,7 @@ import { Controller, Get, Param, Post, Delete } from '@nestjs/common';
 import { Cart } from '../entities/cart.entity';
 import { CartsService } from '../service/carts.service';
 
-@Controller('carts')
+@Controller('customers/carts')
 export class CartsController {
   constructor(private readonly cartsService: CartsService) {}
 
