@@ -13,23 +13,4 @@ export class Product extends BaseEntity {
 
   @Column()
   imageUrl: string;
-
-  constructor({
-    id,
-    price,
-    name,
-    imageUrl,
-  }: {
-    id?: number;
-    price: number;
-    name: string;
-    imageUrl: string;
-  }) {
-    super();
-
-    this.id = id || null;
-    this.price = price;
-    this.name = name;
-    this.imageUrl = imageUrl;
-  }
 }

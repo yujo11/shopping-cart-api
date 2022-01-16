@@ -6,7 +6,7 @@ import { CartsService } from '../service/carts.service';
 export class CartsController {
   constructor(private readonly cartsService: CartsService) {}
 
-  @Post('/id')
+  @Post('/:id')
   createCartItem(@Param('id') id: number): Promise<Cart> {
     return this.cartsService.createCartItem(id);
   }
