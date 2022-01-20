@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeORMConfig } from './configs/typeorm.config';
 import { ProductsModule } from './products/products.module';
+import { CartsModule } from './carts/carts.module';
 
 /*
 
@@ -22,6 +23,6 @@ TODO: ORDERS
 
 */
 @Module({
-  imports: [TypeOrmModule.forRoot(TypeORMConfig), ProductsModule],
+  imports: [TypeOrmModule.forRoot(TypeORMConfig), ProductsModule, CartsModule],
 })
 export class AppModule {}
