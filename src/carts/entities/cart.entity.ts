@@ -1,8 +1,7 @@
-import { Order } from 'src/orders/entities/Order.entity';
+import { Order } from 'src/orders/entities/order.entity';
 import { Product } from 'src/products/entities/product.entity';
 import {
   BaseEntity,
-  Column,
   Entity,
   JoinColumn,
   ManyToOne,
@@ -14,9 +13,6 @@ import {
 export class Cart extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
-
-  @Column()
-  quantity: number;
 
   @OneToOne(() => Product)
   @JoinColumn()

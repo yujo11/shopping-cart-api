@@ -15,7 +15,7 @@ export class CartsService {
 
   async createCart({ productId }: CreateCartDto): Promise<Cart> {
     const product = await this.productsService.getProduct(productId);
-    const cart = await this.cartRepository.create({ product, quantity: 1 });
+    const cart = await this.cartRepository.create({ product });
 
     await this.cartRepository.save(cart);
 
@@ -24,6 +24,16 @@ export class CartsService {
 
   getAllCarts(): Promise<Cart[]> {
     return this.cartRepository.find();
+  }
+
+  async getCart(id: number): Promise<Cart> {
+    const product = await this.cartRepository.findOne(id);
+
+    if (!product) {
+      throw new NotFoundException(`Cant't find cart with id ${id}`);
+    }
+
+    return product;
   }
 
   async deleteCart(id: number): Promise<void> {
