@@ -27,13 +27,13 @@ export class CartsService {
   }
 
   async getCart(id: number): Promise<Cart> {
-    const product = await this.cartRepository.findOne(id);
+    const cart = await this.cartRepository.findOne(id);
 
-    if (!product) {
+    if (!cart) {
       throw new NotFoundException(`Cant't find cart with id ${id}`);
     }
 
-    return product;
+    return cart;
   }
 
   async deleteCart(id: number): Promise<void> {
