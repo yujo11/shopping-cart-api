@@ -1,9 +1,10 @@
 import { Cart } from 'src/carts/entities/cart.entity';
 import {
   BaseEntity,
+  Column,
   Entity,
   JoinColumn,
-  OneToMany,
+  OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
@@ -12,7 +13,10 @@ export class Order extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @OneToMany(() => Cart, (cart) => cart.order)
+  @Column()
+  quantity: number;
+
+  @OneToOne(() => Cart)
   @JoinColumn()
-  carts: Cart[];
+  cart: Cart;
 }
