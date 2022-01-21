@@ -13,4 +13,12 @@ export class Product extends BaseEntity {
 
   @Column()
   imageUrl: string;
+
+  constructor(name?: string, price?: number, imageUrl?: string) {
+    super();
+
+    this.name = name || '';
+    this.price = price || NaN;
+    this.imageUrl = imageUrl || '';
+  }
 }

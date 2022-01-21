@@ -19,4 +19,11 @@ export class Order extends BaseEntity {
   @OneToOne(() => Cart)
   @JoinColumn()
   cart: Cart;
+
+  constructor(quantity?: number, cart?: Cart) {
+    super();
+
+    this.quantity = quantity || NaN;
+    this.cart = cart || new Cart();
+  }
 }

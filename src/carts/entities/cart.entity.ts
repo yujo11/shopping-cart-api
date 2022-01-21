@@ -15,4 +15,10 @@ export class Cart extends BaseEntity {
   @OneToOne(() => Product)
   @JoinColumn()
   product: Product;
+
+  constructor(product?: Product) {
+    super();
+
+    this.product = product || new Product();
+  }
 }
