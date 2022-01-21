@@ -9,4 +9,5 @@ export const TypeORMConfig: TypeOrmModuleOptions = {
   database: 'cart',
   entities: [__dirname + '/../**/*.entity.{js,ts}'],
   synchronize: true,
+  autoLoadEntities: true,
 };
