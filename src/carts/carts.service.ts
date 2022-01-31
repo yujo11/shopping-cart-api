@@ -29,7 +29,9 @@ export class CartsService {
   }
 
   async getCart(id: number): Promise<Cart> {
-    const cart = await this.cartRepository.findOne(id);
+    const cart = await this.cartRepository.findOne(id, {
+      relations: ['product'],
+    });
 
     if (!cart) {
       throw new NotFoundException(`Cant't find cart with id ${id}`);
