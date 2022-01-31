@@ -1,10 +1,8 @@
-import { Order } from 'src/orders/entities/order.entity';
 import { Product } from 'src/products/entities/product.entity';
 import {
   BaseEntity,
   Entity,
   JoinColumn,
-  ManyToOne,
   OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
@@ -17,10 +15,6 @@ export class Cart extends BaseEntity {
   @OneToOne(() => Product)
   @JoinColumn()
   product: Product;
-
-  @ManyToOne(() => Order, (order) => order.carts)
-  @JoinColumn()
-  order: Order;
 
   constructor(product?: Product) {
     super();

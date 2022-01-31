@@ -6,22 +6,13 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+import { OrderDetail } from './orderDetail.entity';
 
 @Entity()
 export class Order extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
-  quantity: number;
-
-  @OneToMany(() => Cart, (cart) => cart.order)
-  carts: Cart[];
-
-  // constructor(quantity?: number, cart?: Cart) {
-  //   super();
-
-  //   this.quantity = quantity || NaN;
-  //   this.cart = cart || new Cart();
-  // }
+  @OneToMany(() => OrderDetail, (orderDetail) => orderDetail.order)
+  orderDetails: OrderDetail[];
 }
