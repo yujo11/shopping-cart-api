@@ -63,8 +63,8 @@ localhost:3000
 
 ### 상품 단일 조회
 
-| method | uri                   |
-| ------ | --------------------- |
+| method | uri            |
+| ------ | -------------- |
 | GET    | /products/{id} |
 
 ```json
@@ -80,8 +80,8 @@ localhost:3000
 
 ### 상품 단일 삭제
 
-| method | uri                   |
-| ------ | --------------------- |
+| method | uri            |
+| ------ | -------------- |
 | DELETE | /products/{id} |
 
 ```json
@@ -130,7 +130,7 @@ localhost:3000
 ```json
 {
   "requestBody": {
-    "id": 1
+    "productId": 1
   }
 }
 ```
