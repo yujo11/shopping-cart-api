@@ -25,10 +25,6 @@ export class OrderDetail extends BaseEntity {
   @Column()
   quantity: number;
 
-  @ManyToOne(() => Order, (order) => order.orderDetails)
-  @JoinColumn()
-  order: Order;
-
   constructor(
     name?: string,
     price?: number,

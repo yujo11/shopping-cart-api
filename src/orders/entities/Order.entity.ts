@@ -1,4 +1,4 @@
-import { BaseEntity, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import { OrderDetail } from './order-detail.entity';
 
 @Entity()
@@ -6,7 +6,7 @@ export class Order extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @OneToMany(() => OrderDetail, (orderDetail) => orderDetail.order)
+  @Column('simple-json')
   orderDetails: OrderDetail[];
 
   constructor(orderDetails?: OrderDetail[]) {
