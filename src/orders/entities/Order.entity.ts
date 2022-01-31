@@ -1,12 +1,5 @@
-import { Cart } from 'src/carts/entities/cart.entity';
-import {
-  BaseEntity,
-  Column,
-  Entity,
-  OneToMany,
-  PrimaryGeneratedColumn,
-} from 'typeorm';
-import { OrderDetail } from './orderDetail.entity';
+import { BaseEntity, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { OrderDetail } from './order-detail.entity';
 
 @Entity()
 export class Order extends BaseEntity {
@@ -15,4 +8,10 @@ export class Order extends BaseEntity {
 
   @OneToMany(() => OrderDetail, (orderDetail) => orderDetail.order)
   orderDetails: OrderDetail[];
+
+  constructor(orderDetails?: OrderDetail[]) {
+    super();
+
+    this.orderDetails = orderDetails || [];
+  }
 }
