@@ -30,13 +30,13 @@ localhost:3000
 {
   "response": [
     {
-      "productId": 1,
+      "id": 1,
       "price": 10000,
       "name": "치킨",
       "imageUrl": "http://example.com/chicken.jpg"
     },
     {
-      "productId": 2,
+      "id": 2,
       "price": 20000,
       "name": "피자",
       "imageUrl": "http://example.com/pizza.jpg"
@@ -65,12 +65,12 @@ localhost:3000
 
 | method | uri                   |
 | ------ | --------------------- |
-| GET    | /products/{productId} |
+| GET    | /products/{id} |
 
 ```json
 {
   "response": {
-    "productId": 1,
+    "id": 1,
     "price": 10000,
     "name": "치킨",
     "imageUrl": "http://example.com/chicken.jpg"
@@ -82,7 +82,7 @@ localhost:3000
 
 | method | uri                   |
 | ------ | --------------------- |
-| DELETE | /products/{productId} |
+| DELETE | /products/{id} |
 
 ```json
 {
@@ -130,7 +130,7 @@ localhost:3000
 ```json
 {
   "requestBody": {
-    "productId": 1
+    "id": 1
   }
 }
 ```
@@ -184,14 +184,14 @@ localhost:3000
       "id": 1,
       "orderDetails": [
         {
-          "productId": 1,
+          "id": 1,
           "price": 10000,
           "name": "치킨",
           "imageUrl": "http://example.com/chicken.jpg",
           "quantity": 5
         },
         {
-          "productId": 2,
+          "id": 2,
           "price": 20000,
           "name": "피자",
           "imageUrl": "http://example.com/pizza.jpg",
@@ -203,14 +203,14 @@ localhost:3000
       "id": 2,
       "orderDetails": [
         {
-          "productId": 1,
+          "id": 1,
           "price": 10000,
           "name": "치킨",
           "imageUrl": "http://example.com/chicken.jpg",
           "quantity": 5
         },
         {
-          "productId": 2,
+          "id": 2,
           "price": 20000,
           "name": "피자",
           "imageUrl": "http://example.com/pizza.jpg",
@@ -233,14 +233,14 @@ localhost:3000
     "id": 1,
     "orderDetails": [
       {
-        "productId": 1,
+        "id": 1,
         "price": 10000,
         "name": "치킨",
         "imageUrl": "http://example.com/chicken.jpg",
         "quantity": 5
       },
       {
-        "productId": 2,
+        "id": 2,
         "price": 20000,
         "name": "피자",
         "imageUrl": "http://example.com/pizza.jpg",
