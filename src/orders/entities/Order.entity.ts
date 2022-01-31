@@ -3,8 +3,7 @@ import {
   BaseEntity,
   Column,
   Entity,
-  JoinColumn,
-  OneToOne,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
@@ -16,14 +15,13 @@ export class Order extends BaseEntity {
   @Column()
   quantity: number;
 
-  @OneToOne(() => Cart)
-  @JoinColumn()
-  cart: Cart;
+  @OneToMany(() => Cart, (cart) => cart.order)
+  carts: Cart[];
 
-  constructor(quantity?: number, cart?: Cart) {
-    super();
+  // constructor(quantity?: number, cart?: Cart) {
+  //   super();
 
-    this.quantity = quantity || NaN;
-    this.cart = cart || new Cart();
-  }
+  //   this.quantity = quantity || NaN;
+  //   this.cart = cart || new Cart();
+  // }
 }
