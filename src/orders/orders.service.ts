@@ -1,20 +1,17 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { CartsService } from 'src/carts/carts.service';
-import { Cart } from 'src/carts/entities/cart.entity';
 import { CreateOrderDto } from './dto/create-order.dto';
-import { Order } from './entities/order.entity';
 import { OrderDetail } from './entities/order-detail.entity';
+import { Order } from './entities/order.entity';
 import { OrderRepository } from './orders.repository';
-import { OrderDetailRepository } from './order-detail.repository';
 
 @Injectable()
 export class OrdersService {
   constructor(
     @InjectRepository(OrderRepository)
     private readonly orderRepository: OrderRepository,
-    @InjectRepository(OrderDetailRepository)
-    private readonly orderDetailRepository: OrderDetailRepository,
+
     private readonly cartsService: CartsService,
   ) {}
 
@@ -24,12 +21,7 @@ export class OrdersService {
   ): Promise<OrderDetail> {
     const cart = await this.cartsService.getCart(cartId);
     const { price, name, imageUrl } = cart.product;
-    const orderDetail = await this.orderDetailRepository.create({
-      name,
-      price,
-      imageUrl,
-      quantity,
-    });
+    const orderDetail = new OrderDetail(name, price, imageUrl, quantity);
 
     return orderDetail;
   }
@@ -44,13 +36,13 @@ export class OrdersService {
 
     const order = await this.orderRepository.create({ orderDetails });
 
+    await this.orderRepository.save(order);
+
     return order;
   }
 
   async getOrder(id: number): Promise<Order> {
-    const order = await this.orderRepository.findOne(id, {
-      relations: ['orderDetails'],
-    });
+    const order = await this.orderRepository.findOne(id);
 
     if (!order) {
       throw new NotFoundException(`Cant't find order with id ${id}`);
@@ -60,6 +52,6 @@ export class OrdersService {
   }
 
   getAllOrders(): Promise<Order[]> {
-    return this.orderRepository.find({ relations: ['orderDetails'] });
+    return this.orderRepository.find();
   }
 }
