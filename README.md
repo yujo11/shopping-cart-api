@@ -181,7 +181,7 @@ https://clean-code-shopping-cart.herokuapp.com/
 {
   "response": [
     {
-      "orderId": 1,
+      "id": 1,
       "orderDetails": [
         {
           "productId": 1,
@@ -200,7 +200,7 @@ https://clean-code-shopping-cart.herokuapp.com/
       ]
     },
     {
-      "orderId": 2,
+      "id": 2,
       "orderDetails": [
         {
           "productId": 1,
@@ -223,14 +223,14 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 주문 단일 조회
 
-| method | uri                                  |
-| ------ | ------------------------------------ |
-| GET    | /customers/{userId}/orders/{orderId} |
+| method | uri                             |
+| ------ | ------------------------------- |
+| GET    | /customers/{userId}/orders/{id} |
 
 ```json
 {
   "response": {
-    "orderId": 1,
+    "id": 1,
     "orderDetails": [
       {
         "productId": 1,
