@@ -9,7 +9,7 @@
 ## 🌏 baseUrl
 
 ```
-https://clean-code-shopping-cart.herokuapp.com/
+localhost:3000
 ```
 
 ## 🔗 API 바로가기
@@ -94,9 +94,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 장바구니 아이템 목록 조회
 
-| method | uri                       |
-| ------ | ------------------------- |
-| GET    | /customers/{userId}/carts |
+| method | uri    |
+| ------ | ------ |
+| GET    | /carts |
 
 ```json
 {
@@ -123,9 +123,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 장바구니 아이템 추가
 
-| method | uri                        |
-| ------ | -------------------------- |
-| POST   | /customers/{userId}/carts/ |
+| method | uri    |
+| ------ | ------ |
+| POST   | /carts |
 
 ```json
 {
@@ -137,9 +137,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 장바구니 아이템 단일 삭제
 
-| method | uri                                |
-| ------ | ---------------------------------- |
-| DELETE | /customers/{userId}/carts/{cartId} |
+| method | uri             |
+| ------ | --------------- |
+| DELETE | /carts/{cartId} |
 
 ```json
 {
@@ -151,9 +151,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 주문 추가(주문하기)
 
-| method | uri                        |
-| ------ | -------------------------- |
-| POST   | /customers/{userId}/orders |
+| method | uri     |
+| ------ | ------- |
+| POST   | /orders |
 
 ```json
 {
@@ -172,9 +172,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 주문 목록(내역) 조회
 
-| method | uri                        |
-| ------ | -------------------------- |
-| GET    | /customers/{userId}/orders |
+| method | uri     |
+| ------ | ------- |
+| GET    | /orders |
 
 ```json
 
@@ -223,9 +223,9 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ### 주문 단일 조회
 
-| method | uri                             |
-| ------ | ------------------------------- |
-| GET    | /customers/{userId}/orders/{id} |
+| method | uri          |
+| ------ | ------------ |
+| GET    | /orders/{id} |
 
 ```json
 {
