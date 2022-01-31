@@ -14,7 +14,7 @@ TODO: PRODUCT
 
 TODO: CARTS
 - [o] 카트를 조회할 수 있다.
-- FIXME: 카트에 물품을 추가할 수 있다.
+- [o]: 카트에 물품을 추가할 수 있다.
 - [o] 카트에 물품을 삭제할 수 있다.
 
 TODO: ORDERS

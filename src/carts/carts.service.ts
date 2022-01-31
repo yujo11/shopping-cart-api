@@ -22,8 +22,10 @@ export class CartsService {
     return cart;
   }
 
-  getAllCarts(): Promise<Cart[]> {
-    return this.cartRepository.find();
+  async getAllCarts(): Promise<Cart[]> {
+    const carts = await this.cartRepository.find({ relations: ['product'] });
+
+    return carts;
   }
 
   async getCart(id: number): Promise<Cart> {
