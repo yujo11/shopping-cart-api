@@ -100,20 +100,24 @@ https://clean-code-shopping-cart.herokuapp.com/
 
 ```json
 {
-  "response": [
-    {
-      "cartId": 1,
-      "price": 10000,
-      "name": "치킨",
-      "imageUrl": "http://example.com/chicken.jpg"
-    },
-    {
-      "cartId": 2,
-      "price": 20000,
-      "name": "피자",
-      "imageUrl": "http://example.com/pizza.jpg"
-    }
-  ]
+  "response": 	{
+    "id": 1,
+		"product": {
+			"name": "test",
+			"price": 1234,
+			"imageUrl": "test.com",
+			"id": 1
+		},
+	},
+	{
+    "id": 5,
+		"product": {
+			"name": "tes11111t",
+			"price": 1234,
+			"imageUrl": "test.com",
+			"id": 10
+		}
+	},
 }
 ```
 
